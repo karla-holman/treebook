@@ -7,6 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+
 	<nav class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container">
@@ -15,12 +16,21 @@
 					<li>
 						<%= link_to "All Statuses", statuses_path %>
 					</li>
+					<li>
+						<%= link_to "Sign Up", new_user_registration_path %>
+					</li>
+					<li>
+						<%= link_to "Sign Out", destroy_user_session_path %>
+					</li>
 				</ul>
 			</div>
 		</div>
 	</nav>
 
 	<div class="container">
+		<!-- Flash Messages -->
+		<p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
 		<%= yield %>
 	</div>
 
