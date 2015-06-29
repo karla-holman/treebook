@@ -1,6 +1,15 @@
 Rails.application.routes.draw do
   devise_for :users
+
+  devise_scope :user do
+    # rake routes for list of options
+    get 'register' => "devise/registrations#new"
+    get 'login' => 'devise/sessions#new'
+    get 'logout' => 'devise/sessions#destroy'
+  end
+
   resources :statuses
+  get 'feed' => 'statuses#index'
   root 'statuses#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
