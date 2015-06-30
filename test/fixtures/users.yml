@@ -16,3 +16,10 @@ karla:
   last_name: "Holman"
   profile_name: "holmankarla"
   email: "holmankarla@gmail.com"
+
+jacob:
+  id: 2
+  first_name: "Jacob"
+  last_name: "Pollowitz"
+  profile_name: "pollowitz"
+  email: "pollowitz@gmail.com"

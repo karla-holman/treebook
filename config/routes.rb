@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   resources :statuses
   get 'feed' => 'statuses#index'
   root 'statuses#index'
+
+  get '/:profile_name' => 'profiles#show'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
