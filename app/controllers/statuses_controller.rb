@@ -2,7 +2,7 @@ class StatusesController < ApplicationController
   before_action :set_status, only: [:show, :edit, :update, :destroy]
 
   # Set up controller with user authentication
-  before_filter :authenticate_user!, only: [:new, :edit]
+  before_filter :authenticate_user!, only: [:new, :edit, :create]
 
   # GET /statuses
   # GET /statuses.json
